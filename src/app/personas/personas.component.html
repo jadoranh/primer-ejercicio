@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado</title>
+</head>
+<body>
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Apellidos</th>
+            <th>Teléfono</th>
+            <th>Email</th>
+            <th>OPCIONES</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let persona of personas">
+
+            <th [class.selected]="persona === selectedPersona" (click)="onSelect(persona)">{{persona.id}}</th>
+            <td>{{persona.nombre}}</td>
+            <td>{{persona.apellidos}}</td>
+            <td>{{persona.telefono}}</td>
+            <td>{{persona.email}}</td>
+            <td>
+                <a href="#landing" >Editar</a>
+                <a href="#landing">Borrar</a>
+            </td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+                <a href="#landing">Añadir</a>                    
+            </td>
+        </tr>
+    </tfoot>
+</table>
+<!--<form action="#">
+    <fieldset>
+        <legend>Nueva persona</legend>
+
+        <div>
+            <label for="id">Id</label>
+            <input type="number" readonly id="id" [(ngModel)]="persona.id" placeholder="id">
+        </div>
+        <div>
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" [(ngModel)]="persona.nombre" placeholder="nombre">
+        </div>
+        <div>
+            <label for="apellidos">Apellidos</label>
+            <input type="text" id="apellidos" [(ngModel)]="persona.apellidos" placeholder="apellidos">
+        </div>
+        <div>
+            <label for="telefono">Teléfono</label>
+            <input type="tel" id="telefono" [(ngModel)]="persona.telefono" placeholder="telefono">
+        </div>
+        <div>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" [(ngModel)]="persona.email" placeholder="email">
+        </div>
+        <div>
+            <button>Aceptar</button>
+        </div>
+    </fieldset>
+</form>-->
+</body>
+</html>

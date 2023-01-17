@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado</title>
+</head>
+<body>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>Apellidos</th>
+                <th>Teléfono</th>
+                <th>Email</th>
+                <th>OPCIONES</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>1</th>
+                <td>Javier</td>
+                <td>Lete</td>
+                <td>654321234</td>
+                <td>javier@email.net</td>
+                <td>
+                    <a href="#">Editar</a>
+                    <a href="#">Borrar</a>
+                </td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                    <a href="#">Añadir</a>                    
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <form action="#">
+        <fieldset>
+            <legend>Cliente</legend>
+
+            <div>
+                <label for="id">Id</label>
+                <input type="number" readonly id="id">
+            </div>
+            <div>
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre">
+            </div>
+            <div>
+                <label for="apellidos">Apellidos</label>
+                <input type="text" id="apellidos">
+            </div>
+            <div>
+                <label for="telefono">Teléfono</label>
+                <input type="tel" id="telefono">
+            </div>
+            <div>
+                <label for="email">Email</label>
+                <input type="email" id="email">
+            </div>
+            <div>
+                <button>Aceptar</button>
+            </div>
+        </fieldset>
+    </form>
+</body>
+</html>
